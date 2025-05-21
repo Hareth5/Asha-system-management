@@ -1,0 +1,10 @@
+Shipment ID: 1, Product ID: 1, Product Name: Monitor, Date: 2024-11-01, Amount: 10, Status: Canceled
+
+Shipment ID: 2, Product ID: 1, Product Name: Monitor, Date: 2024-11-02, Amount: 15, Status: Approved
+
+Shipment ID: 3, Product ID: 2, Product Name: Desk, Date: 2024-11-02, Amount: 20, Status: Canceled
+
+Shipment ID: 4, Product ID: 0, Product Name: Laptop, Date: 2024-11-02, Amount: 20, Status: Approved
+
+Shipment ID: 5, Product ID: 5, Product Name: Hareth, Date: 2025-05-15, Amount: 1000, Status: Approved
+

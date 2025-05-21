@@ -1,0 +1,10 @@
+1,Electronics,Electronics devices and gadgets
+2,Furniture,Home and office furniture items
+3,Office Supplies,Stationery and office materials
+4,Clothing,Apparel and fashion items
+5,Books,Educational and recreational books
+6,Sports Equipment,Gear for various sports
+7,Toys,Children's play items
+8,Kitchenware,Cooking and dining utensils
+9,Automotive Parts,Vehicle components and accessories
+10,Health Products,Medical and wellness items

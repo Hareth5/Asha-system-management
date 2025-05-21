@@ -1,0 +1,50 @@
+0,Laptop,Electronics,Active
+1,Monitor,Electronics,Active
+2,Desk,Furniture,Active
+3,Printer,Office Supplies,Inactive
+4,Headphones,Electronics,Active
+5,Chair,Furniture,Active
+6,Notebook,Office Supplies,Active
+7,TShirt,Clothing,Active
+8,Novel,Books,Active
+9,Tennis Racket,Sports Equipment,Active
+10,Board Game,Toys,Active
+11,Blender,Kitchenware,Active
+12,Car Battery,Automotive Parts,Active
+13,Vitamins,Health Products,Active
+14,Smartphone,Electronics,Inactive
+15,Bookshelf,Furniture,Active
+16,Stapler,Office Supplies,Active
+17,Jacket,Clothing,Active
+18,Textbook,Books,Active
+19,Yoga Mat,Sports Equipment,Active
+20,Action Figure,Toys,Active
+21,Microwave,Kitchenware,Active
+22,Brake Pads,Automotive Parts,Active
+23,Bandages,Health Products,Active
+24,Tablet,Electronics,Active
+25,Table,Furniture,Active
+26,Paper Shredder,Office Supplies,Inactive
+27,Jeans,Clothing,Active
+28,Dictionary,Books,Active
+29,Dumbbells,Sports Equipment,Active
+30,Doll,Toys,Active
+31,Coffee Maker,Kitchenware,Active
+32,Oil Filter,Automotive Parts,Active
+33,Protein Powder,Health Products,Active
+34,Speaker,Electronics,Active
+35,Sofa,Furniture,Active
+36,Calculator,Office Supplies,Active
+37,Sweater,Clothing,Active
+38,Comic Book,Books,Active
+39,Basketball,Sports Equipment,Active
+40,Lego Set,Toys,Active
+41,Toaster,Kitchenware,Active
+42,Spark Plug,Automotive Parts,Active
+43,Thermometer,Health Products,Active
+44,Smartwatch,Electronics,Active
+45,TV Stand,Furniture,Active
+46,Highlighter,Office Supplies,Active
+47,Scarf,Clothing,Active
+48,Cookbook,Books,Active
+49,Jump Rope,Sports Equipment,Active

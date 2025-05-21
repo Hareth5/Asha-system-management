@@ -10,8 +10,8 @@ import javafx.scene.layout.HBox;
 import static proj.Styling.*;
 
 public class NewShipment { // class for adding a new shipment
-    protected Label title, lid, lProductName, lQuantity, lDate;
-    protected TextField id, amount;
+    protected Label title, lid, lProductName, lManufacturer, lDate;
+    protected TextField id, manufacturer;
     protected ComboBox<Product> chosenProduct;
     protected DatePicker date;
     protected Button cancel, action, addProduct;
@@ -28,7 +28,7 @@ public class NewShipment { // class for adding a new shipment
         title = new Label("Add new Shipment");
         lid = new Label("Shipment ID:");
         lProductName = new Label("Product Name:");
-        lQuantity = new Label("Quantity:");
+        lManufacturer = new Label("Manufacturer:");
         lDate = new Label("Date:");
 
         setTitlesStyle(title);
@@ -36,7 +36,7 @@ public class NewShipment { // class for adding a new shipment
 
     private void initializeTxts() { // initialize the scene text fields
         id = new TextField();
-        amount = new TextField();
+        manufacturer = new TextField();
 
         id.setEditable(false);
         id.setText(String.valueOf(Shipment.shipmentCounter));
@@ -45,7 +45,7 @@ public class NewShipment { // class for adding a new shipment
         date = new DatePicker();
 
         setTxtStyle(id);
-        setTxtStyle(amount);
+        setTxtStyle(manufacturer);
         setDatePickerStyle(date);
     }
 
@@ -70,8 +70,8 @@ public class NewShipment { // class for adding a new shipment
         data.setAlignment(Pos.TOP_LEFT);
         data.setPadding(new Insets(0, 20, 20, 20));
 
-        data.addColumn(0, lid, lProductName, lQuantity, lDate);
-        data.addColumn(1, id, chosenProduct, amount, date);
+        data.addColumn(0, lid, lManufacturer, lDate, lProductName);
+        data.addColumn(1, id, manufacturer, date, chosenProduct);
         return data;
     }
 
@@ -100,20 +100,20 @@ public class NewShipment { // class for adding a new shipment
     }
 
     private void addShipment() { // // a method to add new shipment for an existing product
-        String data[] = {id.getText(), amount.getText()};
+        String data[] = {id.getText(), manufacturer.getText()};
         Product product = chosenProduct.getValue();
         if (date.getValue() == null) {
             MyAlert.alert("Error", "Date cannot be null", Alert.AlertType.ERROR);
             return;
         }
         String localDate = date.getValue().toString();
-        boolean add = new ShipmentHandler().handler(data, product, localDate, false);
-        if (add) {
-            id.setText(String.valueOf(Shipment.shipmentCounter));
-            chosenProduct.setValue(chosenProduct.getItems().getFirst());
-            amount.setText("");
-            date.setValue(null);
-            MyAlert.alert("Success", "Shipment added successfully", Alert.AlertType.INFORMATION);
-        }
+//        boolean add = new ShipmentHandler().handler(data, product, localDate, false);
+//        if (add) {
+//            id.setText(String.valueOf(Shipment.shipmentCounter));
+//            chosenProduct.setValue(chosenProduct.getItems().getFirst());
+//            amount.setText("");
+//            date.setValue(null);
+//            MyAlert.alert("Success", "Shipment added successfully", Alert.AlertType.INFORMATION);
+//        }
     }
 }

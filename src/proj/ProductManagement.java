@@ -14,7 +14,7 @@ import static proj.Catalog.*;
 import static proj.Tableview.*;
 
 public class ProductManagement extends CategoryManagement { // class for product management
-    private Button categoryManagement, shipmentManagement;
+    private Button categoryManagement;
     private ComboBox<String> category, sortBy;
     private ToggleGroup toggleGroup;
     private RadioButton all, active, inactive;
@@ -28,7 +28,6 @@ public class ProductManagement extends CategoryManagement { // class for product
 
     private void initialize() { // initialize the scene components
         categoryManagement = new Button("Category Management");
-        shipmentManagement = new Button("Shipment Management");
 
         toggleGroup = new ToggleGroup();
         all = new RadioButton("Show all products");
@@ -38,7 +37,7 @@ public class ProductManagement extends CategoryManagement { // class for product
     }
 
     private void initializeComboBoxes() { // initialize the scene combo boxes
-        category = Catalog.getCategories().getAllCategoriesString();
+        category = new ComboBox<>();
         category.setValue("Select all categories");
 
         sortBy = new ComboBox<>();
@@ -68,7 +67,7 @@ public class ProductManagement extends CategoryManagement { // class for product
     }
 
     private VBox right() { // a method to assemble the right components together
-        VBox btns = new VBox(20, search(), categoryManagement, shipmentManagement);
+        VBox btns = new VBox(20, search(), categoryManagement);
         btns.setPadding(new Insets(20));
         btns.setAlignment(Pos.TOP_CENTER);
         return btns;
@@ -87,7 +86,6 @@ public class ProductManagement extends CategoryManagement { // class for product
 
     private void actions() { // a method to handle all action
         categoryManagement.setOnAction(e -> Main.setMain(new CategoryManagement().main()));
-        shipmentManagement.setOnAction(e -> Main.setMain(new ShipmentManagement().main()));
 
         searching();
         update.setOnAction(e -> update());
@@ -143,24 +141,6 @@ public class ProductManagement extends CategoryManagement { // class for product
             return;
         }
 
-        boolean delete = MyAlert.alert("Remove product", " Are you sure you want to remove this product?", Alert.AlertType.CONFIRMATION);
-        if (delete) {
-
-            int l = product.getCategory().cursorIndex;
-            int id = ProductHandler.getID(product);
-            int name = ProductHandler.getName(product);
-
-            getProducts().remove(product, l);
-            getCursorArray()[name][id].remove(product, 1);
-            getProductList().remove(product);
-
-            Product.productsNumber--;
-            if (product.getStatus().equals("Active"))
-                Product.activeProducts--;
-            else
-                Product.inActiveProducts--;
-            Main.setMain(new ProductManagement().main());
-        }
     }
 
     private void changeCategory() {
@@ -168,49 +148,22 @@ public class ProductManagement extends CategoryManagement { // class for product
         if (cat.equals("Select all categories"))
             getProductTable().setItems(getProductList());
         else {
-            Category current = getCategories().findCategory(cat);
-            ObservableList<Product> temp = getProducts().getAllProducts(current.cursorIndex);
-            getProductTable().setItems(temp);
         }
     }
 
     private void sorting() { // a method to sort products by name, category and status
-        String sort = sortBy.getValue();
-        if (sort.equals("Sort by ID"))
-            getProductTable().setItems(getProductList());
 
-        else if (sort.equals("Sort by name")) {
-            ObservableList<Product> temp = FXCollections.observableArrayList();
-
-            for (int i = 0; i < 26; i++) {
-                for (int j = 0; j < 10; j++) {
-                    temp.addAll(getCursorArray()[i][j].getAllProducts(1));
-                }
-            }
-            getProductTable().setItems(temp);
-
-        } else if (sort.equals("Sort by category")) {
-            ObservableList<Product> temp = getCategories().getAllProducts();
-            getProductTable().setItems(temp);
-
-        } else {
-            ObservableList<Product> temp = getCategories().getAllActiveProducts();
-            temp.addAll(getCategories().getAllInactiveProducts());
-            getProductTable().setItems(temp);
-        }
     }
 
     private void filtering() { // a method to filter products by category and status
         all.setOnAction(e -> getProductTable().setItems(getProductList()));
 
         active.setOnAction(r -> {
-            ObservableList<Product> temp = getCategories().getAllActiveProducts();
-            getProductTable().setItems(temp);
+
         });
 
         inactive.setOnAction(e -> {
-            ObservableList<Product> temp = getCategories().getAllInactiveProducts();
-            getProductTable().setItems(temp);
+
         });
     }
 
@@ -219,23 +172,10 @@ public class ProductManagement extends CategoryManagement { // class for product
         ObservableList<Product> list;
 
         if (searchID) {
-            int idIndex = Integer.parseInt(searchBy) % 10;
-            for (int i = 0; i < 26; i++) {
-                Product product = getCursorArray()[i][idIndex].searchID(1, searchBy);
-                if (product != null) {
-                    temp.add(product);
-                    break;
-                }
-            }
+
 
         } else {
-            char letter = Character.toUpperCase(searchBy.charAt(0));
-            int nameIndex = letter - 65;
-            for (int i = 0; i < 10; i++) {
-                list = getCursorArray()[nameIndex][i].searchName(1, searchBy);
-                if (list.size() > 0)
-                    temp.addAll(list);
-            }
+
         }
 
 

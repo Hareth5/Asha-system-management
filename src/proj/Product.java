@@ -1,47 +1,40 @@
 package proj;
 
 import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleStringProperty;
 
-public class Product implements Comparable<Product> { // a class for product
-    private SimpleStringProperty id, name, status;
-    private SimpleIntegerProperty amount;
+public class Product implements Comparable<Product> {
+    private SimpleIntegerProperty productId, totalQuantity;
+    private SimpleStringProperty name;
+    private SimpleDoubleProperty unitPrice, discount;
+    private Manufacturer manufacturer;
     private Category category;
     public static int productCounter = 1;
-    public static int productsNumber = 0;
-    public static int activeProducts = 0;
-    public static int inActiveProducts = 0;
-    private int numOfShipments;
 
-    public Product(SimpleStringProperty id, SimpleStringProperty name, SimpleStringProperty status, SimpleIntegerProperty amount, Category category) throws IllegalArgumentException {
-        this.id = new SimpleStringProperty();
+    public Product(int productId, String name, double unitPrice, String description, int totalQuantity, double discount, Manufacturer manufacturer, Category category) throws IllegalArgumentException {
+        this.productId = new SimpleIntegerProperty();
         this.name = new SimpleStringProperty();
-        this.status = new SimpleStringProperty();
-        this.amount = new SimpleIntegerProperty();
+        this.unitPrice = new SimpleDoubleProperty();
+        this.totalQuantity = new SimpleIntegerProperty();
+        this.discount = new SimpleDoubleProperty();
 
-        setId(id.get());
-        setName(name.get());
-        setAmount(amount.get());
+        setProductId(productId);
+        setName(name);
+        setUnitPrice(unitPrice);
+        setTotalQuantity(totalQuantity);
+        setDiscount(discount);
+        setManufacturer(manufacturer);
         setCategory(category);
-        setStatus(status.get());
-        productsNumber++;
-        numOfShipments = 0;
     }
 
-    // getters and setters for product data
-
-    public String getId() {
-        return id.get();
+    // getters and Setters
+    public int getProductId() {
+        return productId.get();
     }
 
-    public void setId(String id) throws IllegalArgumentException {
-        if (isNull(id))
-            throw new IllegalArgumentException("ID cannot be null");
-
-        if (!validation(id, "[0-9]+"))
-            throw new IllegalArgumentException("ID must contain only numbers");
-
-        this.id.set(id);
+    public void setProductId(int productId) {
+        this.productId.set(productId);
     }
 
     public String getName() {
@@ -59,34 +52,52 @@ public class Product implements Comparable<Product> { // a class for product
         this.name.set(name);
     }
 
-    public String getStatus() {
-        return status.get();
+    public SimpleStringProperty nameProperty() {
+        return name;
     }
 
-    public void setStatus(String status) throws IllegalArgumentException {
-        if (isNull(status))
-            throw new IllegalArgumentException("Status cannot be empty");
-
-        if (!status.equals("Active") && !status.equals("Inactive"))
-            throw new IllegalArgumentException("Status must be 'Active' or 'Inactive'");
-
-        if (status.equals("Active"))
-            activeProducts++;
-        else
-            inActiveProducts++;
-
-        this.status.set(status);
+    public double getUnitPrice() {
+        return unitPrice.get();
     }
 
-    public int getAmount() {
-        return amount.get();
+    public void setUnitPrice(double unitPrice) throws IllegalArgumentException {
+        if (unitPrice < 0)
+            throw new IllegalArgumentException("Unit price must be non-negative");
+
+        this.unitPrice.set(unitPrice);
     }
 
-    public void setAmount(int amount) throws IllegalArgumentException {
-        if (amount < 0)
-            throw new IllegalArgumentException("Amount must be positive integer");
+    public int getTotalQuantity() {
+        return totalQuantity.get();
+    }
 
-        this.amount.set(amount);
+    public void setTotalQuantity(int totalQuantity) throws IllegalArgumentException {
+        if (totalQuantity < 0)
+            throw new IllegalArgumentException("Total quantity must be non-negative");
+
+        this.totalQuantity.set(totalQuantity);
+    }
+
+    public double getDiscount() {
+        return discount.get();
+    }
+
+    public void setDiscount(double discount) throws IllegalArgumentException {
+        if (discount < 0 || discount > 100)
+            throw new IllegalArgumentException("Discount must be between 0 and 100");
+
+        this.discount.set(discount);
+    }
+
+    public Manufacturer getManufacturer() {
+        return manufacturer;
+    }
+
+    public void setManufacturer(Manufacturer manufacturer) throws IllegalArgumentException {
+        if (manufacturer == null)
+            throw new IllegalArgumentException("Manufacturer cannot be null");
+
+        this.manufacturer = manufacturer;
     }
 
     public Category getCategory() {
@@ -100,29 +111,21 @@ public class Product implements Comparable<Product> { // a class for product
         this.category = category;
     }
 
-    public void setNumOfShipments(int numOfShipments) {
-        this.numOfShipments = numOfShipments;
-    }
-
-    public int getNumOfShipments() {
-        return numOfShipments;
-    }
-
-    private boolean isNull(String value) { // a method to check if the input is null
+    private boolean isNull(String value) {
         return value == null || value.trim().isEmpty();
     }
 
-    private boolean validation(String value, String regex) { // a method to check if the input has a valid expression
-        return value.matches(regex);
+    private boolean validation(String val, String regex) throws IllegalArgumentException {
+        return val.matches(regex);
     }
 
     @Override
-    public int compareTo(Product product) { // comparable by name
+    public int compareTo(Product product) {
         return this.getName().compareTo(product.getName());
     }
 
     @Override
-    public String toString() { // toString method
-        return getId() + ", " + getName();
+    public String toString() {
+        return getProductId() + ", " + getName() + ", " + getUnitPrice() + ", " + getTotalQuantity();
     }
 }

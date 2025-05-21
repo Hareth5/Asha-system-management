@@ -33,11 +33,11 @@ public class Tableview { // a class for initializing all tableViews for showing 
         name.setCellValueFactory(new PropertyValueFactory<>("name"));
         description.setCellValueFactory(new PropertyValueFactory<>("description"));
 
-        amount.setCellValueFactory(cellData -> {
-            Category category = cellData.getValue();
-            int n = Catalog.getProducts().getSize(category.cursorIndex);
-            return new SimpleStringProperty(String.valueOf(n));
-        });
+//        amount.setCellValueFactory(cellData -> {
+//            Category category = cellData.getValue();
+//            int n = Catalog.getProducts().getSize(category.cursorIndex);
+//            return new SimpleStringProperty(String.valueOf(n));
+//        });
 
         categoriesTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
         categoriesTable.setStyle("-fx-background-color: #FFFFFF; -fx-border-color: #DDDDDD;");

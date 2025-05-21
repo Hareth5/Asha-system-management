@@ -1,19 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="9cd12803-d6b3-4686-b7b5-8b9564f70415" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Asha management system.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proj/AddCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/AddCategory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proj/AddProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/AddProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proj/Catalog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/Catalog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proj/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proj/CategoryHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/CategoryHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proj/CategoryManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/CategoryManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proj/Cursor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proj/DoubleLinkedlist.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proj/LoadData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proj/MyAlert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/MyAlert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proj/NewShipment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/NewShipment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proj/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proj/ProductHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/ProductHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proj/ProductManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/ProductManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proj/QueueOfLinkedList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proj/Record.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/Record.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proj/Report.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/Report.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proj/SaveData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proj/ShipmentHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/ShipmentHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proj/ShipmentManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/ShipmentManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proj/SideButtons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/SideButtons.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proj/StackOfLinkedList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proj/Tableview.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/Tableview.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proj/UpdateCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/UpdateCategory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proj/UpdateProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/UpdateProduct.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -27,15 +56,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/harit/OneDrive/Desktop/JAVA/Asha management system/src&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/harit/OneDrive/Desktop/JAVA/javafx-sdk-23.0.1/lib",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\harit\OneDrive\Desktop\JAVA\Asha management system\src" />

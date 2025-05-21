@@ -13,9 +13,11 @@ public class UpdateProduct extends AddProduct { // class for update an existing 
     }
 
     private void fill() { // fill the product data automatically
-        id.setText(product.getId());
+        id.setText(String.valueOf(product.getProductId()));
         name.setText(product.getName());
-        status.setValue(product.getStatus());
+        unitPrice.setText(String.valueOf(product.getUnitPrice()));
+        discount.setText(String.valueOf(product.getDiscount()));
+        name.setText(product.getName());
         category.setValue(product.getCategory().getName());
     }
 

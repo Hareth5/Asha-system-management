@@ -60,16 +60,14 @@ public class SideButtons { // a class for side buttons
         newShipment.setOnAction(e -> Main.setMain(new NewShipment().main()));
 
         load.setOnAction(e -> { // load data from files
-            new LoadData(stage);
-            Main.setMain(new ProductManagement().main());
+
         });
         exit.setOnAction(e -> stage.close());
 
         save.setOnAction(e -> { // sava data to file
-            new SaveData();
-            Main.setMain(new ProductManagement().main());
+
         });
 
-        report.setOnAction(e -> Main.setMain(new Report().main()));
+//        report.setOnAction(e -> Main.setMain(new Report().main()));
     }
 }

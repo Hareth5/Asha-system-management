@@ -2,41 +2,19 @@ package proj;
 
 import javafx.beans.property.SimpleStringProperty;
 
-import static proj.Catalog.getProducts;
 
 public class Category { // a class for category
-    private SimpleStringProperty id, name, description;
-    public static int CategoryCounter = 1;
-    public int cursorIndex = getProducts().createList();
-    private int approvedCategories = 0;
-    private int canceledCategories = 0;
+    private SimpleStringProperty name, description;
 
-    public Category(SimpleStringProperty id, SimpleStringProperty name, SimpleStringProperty description) throws IllegalArgumentException {
-        this.id = new SimpleStringProperty();
+    public Category(String name, String description) {
         this.name = new SimpleStringProperty();
         this.description = new SimpleStringProperty();
 
-        setId(id.get());
-        setName(name.get());
-        setDescription(description.get());
+        setName(name);
+        setDescription(description);
     }
 
-    // getters and setters for category data
-
-    public String getId() {
-        return id.get();
-    }
-
-    public void setId(String id) throws IllegalArgumentException {
-        if (isNull(id))
-            throw new IllegalArgumentException("ID cannot be null");
-
-        if (!validation(id, "[0-9]+"))
-            throw new IllegalArgumentException("ID must contain only numbers");
-
-        this.id.set(id);
-    }
-
+    // getters and setters
     public String getName() {
         return name.get();
     }
@@ -60,22 +38,6 @@ public class Category { // a class for category
             throw new IllegalArgumentException("Description cannot be empty");
 
         this.description.set(description);
-    }
-
-    public int getApprovedCategories() {
-        return approvedCategories;
-    }
-
-    public void setApprovedCategories(int approvedCategories) {
-        this.approvedCategories = approvedCategories;
-    }
-
-    public int getCanceledCategories() {
-        return canceledCategories;
-    }
-
-    public void setCanceledCategories(int canceledCategories) {
-        this.canceledCategories = canceledCategories;
     }
 
     private boolean isNull(String value) { // a method to check if the input is null

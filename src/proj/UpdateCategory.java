@@ -13,7 +13,6 @@ public class UpdateCategory extends AddCategory { // class for update an existin
     }
 
     private void fill() { // fill the category data automatically
-        id.setText(category.getId());
         name.setText(category.getName());
         description.setText(category.getDescription());
     }

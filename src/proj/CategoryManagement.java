@@ -1,6 +1,5 @@
 package proj;
 
-import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Alert;
@@ -15,7 +14,6 @@ import javafx.scene.layout.HBox;
 import static proj.Catalog.getCategoryList;
 import static proj.Tableview.getCategoriesTable;
 import static proj.Tableview.getCategoryTable;
-import static proj.Catalog.getCategories;
 import static proj.Styling.setSearchTxtStyle;
 import static proj.Styling.setSmallButtonsStyle;
 
@@ -89,14 +87,6 @@ public class CategoryManagement { // class for category management
                     return;
                 }
 
-                ObservableList<Category> temp = getCategories().searchName(searchBy);
-                if (temp.isEmpty()) {
-                    MyAlert.alert("Not found", "There are no categories starts with this Name", Alert.AlertType.INFORMATION);
-                    return;
-                }
-
-                getCategoriesTable().setItems(temp);
-                category = temp.getFirst();
                 cancel.setDisable(false);
                 remove.setDisable(false);
                 update.setDisable(false);
@@ -135,36 +125,6 @@ public class CategoryManagement { // class for category management
             remove.setDisable(true);
             update.setDisable(true);
             return;
-        }
-
-        Object choice[] = MyAlert.removeCategoryAlert();
-        if (choice[1].equals("remove")) {
-            int size = Catalog.getProducts().getSize(category.cursorIndex);
-            Product.productsNumber -= size;
-            Object[] arr = Catalog.getProducts().clear(category.cursorIndex);
-            ObservableList<Product> list = (ObservableList<Product>) arr[0];
-            Product.activeProducts -= (int) arr[1];
-            Product.inActiveProducts -= (int) arr[2];
-            Catalog.getProductList().removeAll(list);
-
-            Catalog.getCategories().remove(category);
-            Catalog.getCategoryList().remove(category);
-
-            for (int i = 0; i < 26; i++) {
-                for (int j = 0; j < 10; j++) {
-                    Catalog.getCursorArray()[i][j].removeAll(category, 1);
-                }
-            }
-
-        } else if (choice[1].equals("update")) {
-            Catalog.getCategories().remove(category);
-            Catalog.getCategoryList().remove(category);
-
-            for (int i = 0; i < 26; i++) {
-                for (int j = 0; j < 10; j++) {
-                    Catalog.getCursorArray()[i][j].updateCategory(category, (Category) choice[0], 1);
-                }
-            }
         }
 
         Main.setMain(new CategoryManagement().main());

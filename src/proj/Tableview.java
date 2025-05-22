@@ -77,10 +77,10 @@ public class Tableview { // a class for initializing all tableViews for showing 
         TableColumn<Record, String> date = new TableColumn<>("Date");
         TableColumn<Record, String> status = new TableColumn<>("status");
 
-        id.setCellValueFactory(cellData -> {
-            Record record = cellData.getValue();
-            return new SimpleStringProperty(record.getShipment().getId());
-        });
+//        id.setCellValueFactory(cellData -> {
+//            Record record = cellData.getValue();
+//            return new SimpleStringProperty(record.getShipment().getId());
+//        });
 
         product.setCellValueFactory(cellData -> {
             Record record = cellData.getValue();
@@ -92,10 +92,10 @@ public class Tableview { // a class for initializing all tableViews for showing 
             return new SimpleStringProperty(String.valueOf(record.getShipment().getAmount()));
         });
 
-        date.setCellValueFactory(cellData -> {
-            Record record = cellData.getValue();
-            return new SimpleStringProperty(record.getShipment().getDate().toString());
-        });
+//        date.setCellValueFactory(cellData -> {
+//            Record record = cellData.getValue();
+//            return new SimpleStringProperty(record.getShipment().getDate().toString());
+//        });
 
         status.setCellValueFactory(new PropertyValueFactory<>("status"));
 

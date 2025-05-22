@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class Catalog { // a class contain the main project data structures
-    private static Queue<Shipment> shipments = new LinkedList<>();
+    private static Queue<Entry> shipments = new LinkedList<>();
     private static ObservableList<Category> categoryList;
     private static ObservableList<Product> productList;
     private static ObservableList<Record> shipmentsRecord;
@@ -18,7 +18,7 @@ public class Catalog { // a class contain the main project data structures
         shipmentsRecord = FXCollections.observableArrayList();
     }
 
-    public static Queue<Shipment> getShipments() {
+    public static Queue<Entry> getShipments() {
         return shipments;
     }
 

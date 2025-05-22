@@ -6,31 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="9cd12803-d6b3-4686-b7b5-8b9564f70415" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/proj/AddCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/AddCategory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/proj/AddProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/AddProduct.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/proj/Catalog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/Catalog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/proj/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/proj/CategoryHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/CategoryHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/proj/CategoryManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/CategoryManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/proj/Cursor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/proj/DoubleLinkedlist.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/proj/LoadData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/proj/MyAlert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/MyAlert.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/proj/NewShipment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/NewShipment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/proj/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/proj/ProductHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/ProductHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/proj/ProductManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/ProductManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/proj/QueueOfLinkedList.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/proj/Record.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/Record.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/proj/Report.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/Report.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/proj/SaveData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/proj/ShipmentHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/ShipmentHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proj/Shipment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/Entry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/proj/ShipmentManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/ShipmentManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/proj/SideButtons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/SideButtons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/proj/StackOfLinkedList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/proj/Tableview.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/Tableview.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/proj/UpdateCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/UpdateCategory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/proj/UpdateProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proj/UpdateProduct.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

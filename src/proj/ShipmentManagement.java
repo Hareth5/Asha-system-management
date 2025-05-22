@@ -78,11 +78,11 @@ public class ShipmentManagement extends NewShipment { // class for shipment mana
 
     private void fill() { // a method to fill text fields automatically
         if (getShipments().size() > 0) {
-            Shipment shipment = (Shipment) getShipments().peek();
-            id.setText(shipment.getId());
+            Entry shipment = (Entry) getShipments().peek();
+            id.setText(String.valueOf(shipment.getProduct().getProductId()));
             productTxt.setText(shipment.getProduct().toString());
             manufacturer.setText(String.valueOf(shipment.getAmount()));
-            date.setValue(shipment.getDate());
+            date.setValue(shipment.getStartDate());
 
         } else {
             id.setText("null");

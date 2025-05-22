@@ -6,7 +6,6 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
-
 public class Main extends Application {
     private Catalog catalog;
     private static BorderPane main;
@@ -36,7 +35,6 @@ public class Main extends Application {
         primaryStage.setTitle("Bomber on fire");
         primaryStage.show();
     }
-
 
     public static void main(String[] args) {
         launch(args);

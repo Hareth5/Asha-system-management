@@ -1,21 +1,21 @@
 package proj;
 
 public class Record { // a class for saving shipments records
-    private Shipment shipment;
+    private Entry shipment;
     private String status;
 
-    public Record(Shipment shipment, String status) {
+    public Record(Entry shipment, String status) {
         this.shipment = shipment;
         this.status = status;
     }
 
     // getters and setters
 
-    public Shipment getShipment() {
+    public Entry getShipment() {
         return shipment;
     }
 
-    public void setShipment(Shipment shipment) {
+    public void setShipment(Entry shipment) {
         this.shipment = shipment;
     }
 

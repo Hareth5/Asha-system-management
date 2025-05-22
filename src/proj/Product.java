@@ -26,6 +26,7 @@ public class Product implements Comparable<Product> {
         setDiscount(discount);
         setManufacturer(manufacturer);
         setCategory(category);
+        totalQuantity = 0;
     }
 
     // getters and Setters
